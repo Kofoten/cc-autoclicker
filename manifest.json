@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Clicker for Cookie Clicker",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://orteil.dashnet.org/cookieclicker",
+        "*://orteil.dashnet.org/cookieclicker/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injected_cheat.js"
+      ],
+      "matches": [
+        "*://orteil.dashnet.org/*"
+      ]
+    }
+  ]
+}
