@@ -1,0 +1,10 @@
+# Ignore the build output folder
+out/
+
+# Ignore Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings (Optional, but good if you use VS Code)
+.vscode/
+.idea/
