@@ -1,1 +1,3 @@
+# Privacy Policy
+
 This extension does not collect, store, or transmit any personal data. It runs entirely locally on your machine.
