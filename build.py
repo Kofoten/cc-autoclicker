@@ -6,13 +6,6 @@ ZIP_NAME = "cc-autoclicker.zip"
 SOURCE_DIR = "src"
 OUT_DIR = "out"
 
-INCLUDE_LIST = [
-    "manifest.json",
-    "content.js",
-    "injected_cheat.js",
-    "icons"
-]
-
 def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     src_path = os.path.join(base_dir, SOURCE_DIR)
@@ -31,20 +24,12 @@ def main():
 
     try:
         with zipfile.ZipFile(zip_file_path, "w", zipfile.ZIP_DEFLATED) as zipf:
-            for item in INCLUDE_LIST:
-                abs_path = os.path.join(src_path, item)
-
-                if not os.path.isfile(abs_path):
-                    print(f"Adding file: {item}")
-                    zipf.write(abs_path, arcname=item)
-
-                elif os.path.isdir(abs_path):
-                    print(f"Adding folder {item}/")
-                    for root, _, files in os.walk(abs_path):
-                        for file in files:
-                            full_path = os.path.join(root, file)
-                            rel_path = os.path.relpath(full_path, src_path)
-                            zipf.write(full_path, arcname=rel_path)
+            for root, _, files in os.walk(src_path):
+                for file in files:
+                    full_path = os.path.join(root, file)
+                    rel_path = os.path.relpath(full_path, src_path)
+                    print(f"Adding file: {rel_path}")
+                    zipf.write(full_path, arcname=rel_path)
 
         print(f"Success! Created '{ZIP_NAME}' in '{OUT_DIR}'.")
 
