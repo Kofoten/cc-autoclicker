@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Auto Clicker for Cookie Clicker",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Automatically clicks cookies and shimmers.",
   "host_permissions": [
     "*://orteil.dashnet.org/*"
