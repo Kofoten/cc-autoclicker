@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h3>Settings</h3>
+
+    <form id="settingsForm">
+        <div class="control-row">
+            <div>
+                <span class="label-text">Active</span>
+                <span class="sub-label">Master Switch</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" name="isRunning">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="control-row">
+            <div>
+                <span class="label-text">Auto-Pop</span>
+                <span class="sub-label">Harvest Fattest</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" name="popWrinklers">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="control-row">
+            <div>
+                <span class="label-text">Wrath Cookies</span>
+                <span class="sub-label" style="color:#d88;">Accept Risk (x666)</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" name="clickWrath" class="risk">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <button type="submit">Save & Update Game</button>
+    </form>
+
+    <div class="status" id="statusMsg"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
